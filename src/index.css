@@ -9,3 +9,16 @@
 body {
   background-color: #ededed;
 }
+
+.container {
+  width: 90%;
+}
+
+.fixed-card {
+  width: 200px;
+  img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+  }
+}
