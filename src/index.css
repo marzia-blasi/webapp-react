@@ -22,3 +22,9 @@ body {
     object-fit: cover;
   }
 }
+
+img {
+  width: 400px;
+  height: 450px;
+  object-fit: cover;
+}
