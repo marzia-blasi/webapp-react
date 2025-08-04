@@ -38,11 +38,19 @@ export default function DetailPage() {
 
           <div className="col-md-6 d-flex align-items-start">
             <div>{movie.abstract}</div>
+
             <div>
               <button>Prossimo prodotto</button>
             </div>
           </div>
         </div>
+        {movie?.reviews?.map((review) => {
+          return (
+            <div className="reviews" key={review.id}>
+              <p>{review.text}</p>
+            </div>
+          );
+        })}
       </div>
     </>
   );
