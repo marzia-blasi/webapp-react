@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
   const api_movies = "http://localhost:3030/movie";
@@ -28,7 +29,9 @@ export default function HomePage() {
                     />
 
                     <div className="card-body">
-                      <h5 className="card-title">{title}</h5>
+                      <Link to={`/Details/${id}`}>
+                        <h5 className="card-title">{title}</h5>
+                      </Link>
                       <p className="card-text">{abstract}</p>
                     </div>
                   </div>

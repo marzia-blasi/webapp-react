@@ -24,7 +24,11 @@ export default function DetailPage() {
           <div className="col-md-6">
             <div className="container-light">
               <div className="card">
-                <img src={movie.image} alt="" className="card-img-top" />
+                <img
+                  src={`/movies_cover/${movie.image}`}
+                  alt={movie.title}
+                  className="card-img-top"
+                />
                 <div className="card-body">
                   <h3 className="card-title">{movie.title}</h3>
                 </div>

@@ -21,7 +21,7 @@ export default function Header() {
           </button>
           <div className="collapse navbar-collapse" id="collapsibleNavId">
             <ul className="navbar-nav me-auto mt-2 mt-lg-0">
-              <li className="nav-item"></li>
+              <li className="nav-item">prova</li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
                   Link
