@@ -9,15 +9,16 @@ export default function Footer() {
           <NavLink className="navbar-brand" to="/">
             Home
           </NavLink>
-          <NavLink
-            className="nav-link active"
-            to="/Details"
-            aria-current="page"
-          >
-            Details
-          </NavLink>
         </div>
       </div>
     </footer>
   );
 }
+
+/**<NavLink
+            className="nav-link active"
+            to={`/Details/${movie.id}`}
+            aria-current="page"
+          >
+            Details
+          </NavLink> */

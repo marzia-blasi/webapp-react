@@ -21,16 +21,7 @@ export default function Header() {
           </button>
           <div className="collapse navbar-collapse" id="collapsibleNavId">
             <ul className="navbar-nav me-auto mt-2 mt-lg-0">
-              <li className="nav-item">
-                <NavLink
-                  className="nav-link active"
-                  to="/Details"
-                  aria-current="page"
-                >
-                  Details
-                  <span className="visually-hidden">(current)</span>
-                </NavLink>
-              </li>
+              <li className="nav-item"></li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
                   Link
@@ -43,3 +34,13 @@ export default function Header() {
     </header>
   );
 }
+
+/*<NavLink
+                  className="nav-link active"
+                  to={`/Details/${movie.id}`}
+                  aria-current="page"
+                >
+                  Details
+                  <span className="visually-hidden">(current)</span>
+                </NavLink>
+                */

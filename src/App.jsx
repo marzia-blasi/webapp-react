@@ -12,9 +12,9 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route Component={DefaultLayout}>
+          <Route element={<DefaultLayout />}>
             <Route index element={<HomePage />} />
-            <Route path="/Details" element={<DetailPage />} />
+            <Route path="/Details/:id" element={<DetailPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
