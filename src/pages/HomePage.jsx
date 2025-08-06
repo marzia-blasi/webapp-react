@@ -1,15 +1,21 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Loader from "../components/Loader";
 
 export default function HomePage() {
   const api_movies = "http://localhost:3030/movie";
   const [movies, setMovies] = useState([]);
+
+  //Loader
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     fetch(api_movies)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
         setMovies(data);
+        setIsLoading(false);
       });
   }, []);
 
@@ -18,8 +24,10 @@ export default function HomePage() {
       <section>
         <div className="container">
           <div className="row justify-content-start mt-5">
-            {movies?.map(({ id, image, title, abstract }) => {
-              return (
+            {isLoading ? (
+              <Loader />
+            ) : (
+              movies?.map(({ id, image, title, abstract }) => (
                 <div className="col-auto mb-4" key={id}>
                   <div className="card fixed-card">
                     <img
@@ -27,7 +35,6 @@ export default function HomePage() {
                       className="card-img-top"
                       alt={title}
                     />
-
                     <div className="card-body">
                       <Link to={`/Details/${id}`}>
                         <h5 className="card-title">{title}</h5>
@@ -36,8 +43,8 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
-              );
-            })}
+              ))
+            )}
           </div>
         </div>
       </section>
