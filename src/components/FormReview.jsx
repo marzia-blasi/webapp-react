@@ -1,7 +1,8 @@
 import { useState } from "react";
 
 export default function FormReview({ setMovie, movieId }) {
-  const url_movies = "http://localhost:3000/movies";
+  const url_movies = "http://localhost:3030/movie";
+
   const [formData, setFormData] = useState({
     name: "",
     vote: "1",

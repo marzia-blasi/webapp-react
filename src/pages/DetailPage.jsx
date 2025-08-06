@@ -7,7 +7,8 @@ export default function DetailPage() {
   const { id } = useParams();
   const movieId = Number(id);
   const navigate = useNavigate();
-  const api_show = `http://localhost:3030/movie/${id}`;
+
+  const api_show = `http://localhost:3030/movie/${movieId}`;
 
   const [movie, setMovie] = useState({});
 
@@ -50,7 +51,9 @@ export default function DetailPage() {
         {movie?.reviews?.map((review) => {
           return (
             <div className="reviews" key={review.id}>
-              <p>{review.text}</p>
+              <div className="card mt-3">
+                <p>{review.text}</p>
+              </div>
             </div>
           );
         })}
