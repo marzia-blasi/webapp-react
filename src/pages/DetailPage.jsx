@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
+
+import FormReview from "../components/FormReview";
 
 export default function DetailPage() {
   const { id } = useParams();
   const movieId = Number(id);
+  const navigate = useNavigate();
   const api_show = `http://localhost:3030/movie/${id}`;
 
   const [movie, setMovie] = useState({});
@@ -51,6 +54,7 @@ export default function DetailPage() {
             </div>
           );
         })}
+        <FormReview setMovie={setMovie} movieId={id} />
       </div>
     </>
   );
